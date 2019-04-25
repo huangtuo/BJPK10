@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_size_10"
+        android:layout_marginLeft="@dimen/common_size_10"
+        >
+
+        <TextView
+            android:id="@+id/planDetails_tv_periodArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_black03"
+            android:textSize="@dimen/text_size_14"
+            tools:text="124期" />
+
+        <TextView
+            android:id="@+id/planDetails_tv_expect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_size_10"
+            android:layout_toRightOf="@id/planDetails_tv_periodArea"
+            android:text="预"
+            android:textColor="@color/text_color_red"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/planDetails_tv_guess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_size_10"
+            android:layout_toRightOf="@id/planDetails_tv_expect"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_color_black03"
+             />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_size_10"
+        android:layout_marginRight="@dimen/common_size_10"
+        >
+
+        <TextView
+            android:id="@+id/planDetails_tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_color_green"
+            android:textSize="@dimen/text_size_14"
+            tools:text="对" />
+        <TextView
+            android:id="@+id/planDetails_tv_openNums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_size_5"
+            android:layout_toLeftOf="@id/planDetails_tv_state"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_color_blue"
+             />
+
+        <TextView
+            android:id="@+id/planDetails_tv_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_size_10"
+            android:layout_toLeftOf="@id/planDetails_tv_openNums"
+            android:text="开"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/text_size_14" />
+        <TextView
+            android:id="@+id/planDetails_tv_expectPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_size_10"
+            android:layout_toLeftOf="@id/planDetails_tv_open"
+            android:textColor="@color/text_color_black03"
+            android:textSize="@dimen/text_size_14"
+            tools:text="124期" />
+        <TextView
+            android:id="@+id/planDetails_tv_expectIndex"
+            android:layout_width="@dimen/common_size_15"
+            android:layout_height="@dimen/common_size_15"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_size_10"
+            android:layout_toLeftOf="@id/planDetails_tv_expectPeriod"
+            android:background="@drawable/circle_hollow_blue"
+            android:gravity="center"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/text_size_10"
+            tools:text="3" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_size_10"
+        android:background="@color/divider_line"/>
+
+</LinearLayout>

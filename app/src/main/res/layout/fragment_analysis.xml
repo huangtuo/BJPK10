@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_page"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common_size_44"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <RadioGroup
+                android:id="@+id/analysis_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/analysis_btn_miss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/common_size_30"
+                    android:layout_marginLeft="@dimen/common_size_5"
+                    android:layout_marginRight="@dimen/common_size_5"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/common_size_10"
+                    android:paddingRight="@dimen/common_size_10"
+                    android:text="遗漏分析"
+                    android:checked="true"
+                    android:background="@drawable/analysis_chebox_bg_select"
+                    android:button="@null"
+                    android:textColor="@drawable/analysis_title_text_select"
+                    android:textSize="@dimen/text_size_16" />
+
+                <RadioButton
+                    android:id="@+id/analysis_btn_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/common_size_30"
+                    android:layout_marginLeft="@dimen/common_size_5"
+                    android:layout_marginRight="@dimen/common_size_5"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/common_size_10"
+                    android:paddingRight="@dimen/common_size_10"
+                    android:text="冷热分析"
+                    android:background="@drawable/analysis_chebox_bg_select"
+                    android:button="@null"
+                    android:textColor="@drawable/analysis_title_text_select"
+                    android:textSize="@dimen/text_size_16" />
+
+                <RadioButton
+                    android:id="@+id/analysis_btn_targetMiss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/common_size_30"
+                    android:layout_marginLeft="@dimen/common_size_5"
+                    android:layout_marginRight="@dimen/common_size_5"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/common_size_10"
+                    android:paddingRight="@dimen/common_size_10"
+                    android:background="@drawable/analysis_chebox_bg_select"
+                    android:button="@null"
+                    android:text="指标遗漏分析"
+                    android:textColor="@drawable/analysis_title_text_select"
+                    android:textSize="@dimen/text_size_16" />
+
+                <RadioButton
+                    android:id="@+id/analysis_btn_targetHot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/common_size_30"
+                    android:layout_marginLeft="@dimen/common_size_5"
+                    android:layout_marginRight="@dimen/common_size_5"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/common_size_10"
+                    android:paddingRight="@dimen/common_size_10"
+                    android:background="@drawable/analysis_chebox_bg_select"
+                    android:button="@null"
+                    android:text="指标冷热分析"
+                    android:textColor="@drawable/analysis_title_text_select"
+                    android:textSize="@dimen/text_size_16" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_size_1"
+        android:background="@color/divider_line" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        >
+        <LinearLayout
+            android:id="@+id/analysis_ll_miss"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/analysis_tv_missTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_size_10"
+                android:paddingBottom="@dimen/common_size_10"
+                android:gravity="center"
+                tools:text="第一名"
+                android:textSize="@dimen/text_size_18"
+                android:textColor="@color/text_color_black"
+                />
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/analysis_barChart_miss"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/analysis_ll_hot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/analysis_tv_hotTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_size_10"
+                android:paddingBottom="@dimen/common_size_10"
+                android:gravity="center"
+                tools:text="第一名"
+                android:textSize="@dimen/text_size_18"
+                android:textColor="@color/text_color_black"
+                />
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/analysis_pieChart_hot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/analysis_ll_targetMiss"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/analysis_tv_targetMissTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_size_10"
+                android:paddingBottom="@dimen/common_size_10"
+                android:gravity="center"
+                tools:text="第一名"
+                android:textSize="@dimen/text_size_18"
+                android:textColor="@color/text_color_black"
+                />
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/analysis_barChart_targetMiss"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/analysis_ll_targetHot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/analysis_tv_targetHotTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_size_10"
+                android:paddingBottom="@dimen/common_size_10"
+                android:gravity="center"
+                tools:text="第一名"
+                android:textSize="@dimen/text_size_18"
+                android:textColor="@color/text_color_black"
+                />
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/analysis_pieChart_targetHot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/analysis_rel_dialogInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_size_10"
+            android:visibility="invisible"
+            android:background="@drawable/circle_5_black_trans_bg">
+            <TextView
+                android:id="@+id/analysis_tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_size_14"
+                />
+
+            <View
+                android:id="@+id/analysis_v_ball"
+                android:layout_width="@dimen/common_size_10"
+                android:layout_height="@dimen/common_size_10"
+                android:layout_below="@id/analysis_tv_num"
+                android:layout_marginTop="@dimen/common_size_10"
+                android:background="@drawable/circle_red_bg" />
+
+            <TextView
+                android:id="@+id/analysis_tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_size_5"
+                android:layout_marginLeft="@dimen/common_size_5"
+                android:layout_below="@id/analysis_tv_num"
+                android:layout_toRightOf="@id/analysis_v_ball"
+                android:text="出现次数：7"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_size_14" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

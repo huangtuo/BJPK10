@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_page"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_size_10"
+        android:layout_marginLeft="@dimen/common_size_10"
+        android:layout_marginRight="@dimen/common_size_10"
+        >
+
+        <ImageView
+            android:id="@+id/plan_img_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/page_tu" />
+        <TextView
+            android:id="@+id/plan_tv_codeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/plan_img_label"
+            android:layout_marginLeft="@dimen/common_size_10"
+            android:textStyle="bold"
+            tools:text="定位系列-定码"
+            android:textColor="@color/text_color_black03"
+            android:textSize="@dimen/text_size_14"
+            />
+        <TextView
+            android:id="@+id/plan_tv_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_size_3"
+            android:layout_toRightOf="@id/plan_tv_codeName"
+            android:textStyle="bold"
+            tools:text="冠军"
+            android:textColor="@color/text_color_black03"
+            android:visibility="gone"
+            android:textSize="@dimen/text_size_14"
+            />
+        <TextView
+            android:id="@+id/plan_tv_guessRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_size_12"
+            tools:text="100%"
+            android:textColor="@color/text_color_black03"/>
+        <LinearLayout
+            android:id="@+id/plan_ll_guessRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toLeftOf="@id/plan_tv_guessRate"
+            android:layout_marginRight="@dimen/common_size_3"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_size_10"
+        >
+        <TextView
+            android:id="@+id/plan_tv_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_color_black03"
+            tools:text="653-655期"/>
+        <TextView
+            android:id="@+id/plan_tv_index"
+            android:layout_width="@dimen/common_size_15"
+            android:layout_height="@dimen/common_size_15"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/common_size_5"
+            android:layout_toRightOf="@id/plan_tv_period"
+            android:textSize="@dimen/text_size_10"
+            android:textColor="@color/text_color_blue"
+            android:background="@drawable/circle_hollow_blue"
+            tools:text="3"/>
+
+        <ImageView
+            android:id="@+id/plan_img_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_size_5"
+            android:layout_toRightOf="@id/plan_tv_index"
+            android:visibility="gone"
+            android:src="@mipmap/ding" />
+
+        <TextView
+            android:id="@+id/plan_tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/plan_img_type"
+            android:layout_marginLeft="@dimen/common_size_3"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_color_black03"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_size_1"
+        android:background="@color/divider_line"/>
+
+</LinearLayout>

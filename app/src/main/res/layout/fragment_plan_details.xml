@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rx.mvp.zyzj.widget.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/planDetails_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/common_size_10"
+            android:paddingLeft="@dimen/common_size_15"
+            android:paddingRight="@dimen/common_size_15"
+            android:paddingTop="@dimen/common_size_20">
+
+            <TextView
+                android:id="@+id/planDetails_tv_old_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_black03"
+                android:textSize="@dimen/text_size_14"
+                tools:text="123期" />
+
+            <LinearLayout
+                android:id="@+id/planDetails_ll_numbers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_size_10"
+                android:background="@drawable/oval_holloe_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/common_size_5"
+                android:paddingTop="@dimen/common_size_5"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_size_20">
+
+                <TextView
+                    android:id="@+id/planDetails_tv_periodArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_black03"
+                    android:textSize="@dimen/text_size_14"
+                    tools:text="124期" />
+
+                <TextView
+                    android:id="@+id/planDetails_tv_expect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_size_10"
+                    android:layout_toRightOf="@id/planDetails_tv_periodArea"
+                    android:text="预"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/planDetails_tv_guess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/common_size_10"
+                    android:layout_toRightOf="@id/planDetails_tv_expect"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/text_color_black03"
+                     />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_size_15">
+
+                <LinearLayout
+                    android:id="@+id/planDetals_ll_lottery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <com.rx.mvp.zyzj.widget.SnapUpCountDownTimerView
+                        android:id="@+id/planDetals_countDownTimerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:viewSize="14"
+                        app:textColor="@color/text_color_red"
+                        />
+                    <TextView
+                        android:id="@+id/planDetails_tv_opening"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color_black03"
+                        android:textSize="@dimen/text_size_14"
+                        android:text="正在开奖中..."
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/planDetails_img_countdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_size_10"
+                    android:layout_toLeftOf="@id/planDetals_ll_lottery"
+                    android:background="@mipmap/clock" />
+
+                <TextView
+                    android:id="@+id/planDetails_tv_countdownPeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_size_10"
+                    android:layout_toLeftOf="@id/planDetails_img_countdown"
+                    android:textColor="@color/text_color_black03"
+                    android:textSize="@dimen/text_size_14"
+                    tools:text="124期" />
+
+                <TextView
+                    android:id="@+id/planDetails_tv_index"
+                    android:layout_width="@dimen/common_size_15"
+                    android:layout_height="@dimen/common_size_15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_size_10"
+                    android:layout_toLeftOf="@id/planDetails_tv_countdownPeriod"
+                    android:background="@drawable/circle_hollow_blue"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_blue"
+                    android:textSize="@dimen/text_size_10"
+                    tools:text="3" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_size_1"
+            android:background="@color/divider_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_yellow"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/common_size_15"
+            android:paddingLeft="@dimen/common_size_10"
+            android:paddingRight="@dimen/common_size_10"
+            android:paddingTop="@dimen/common_size_15">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="准确率"
+                    android:textColor="@color/text_color_black03"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/planDetails_tv_precisionRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_12"
+                    tools:text="100%" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最大连对"
+                    android:textColor="@color/text_color_black03"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/planDetails_tv_maxRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_12"
+                    tools:text="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最大连错"
+                    android:textColor="@color/text_color_black03"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/planDetails_tv_maxWrong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_12"
+                    tools:text="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前连对/错"
+                    android:textColor="@color/text_color_black03"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/planDetails_tv_currentRorW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_12"
+                    tools:text="-1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_size_1"
+            android:background="@color/divider_line" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_size_1"
+            android:layout_marginTop="@dimen/common_size_10"
+            android:background="@color/divider_line" />
+
+        <com.android.base.widget.NoScrollListview
+            android:id="@+id/planDetails_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+</com.rx.mvp.zyzj.widget.MyScrollView>

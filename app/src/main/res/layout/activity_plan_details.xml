@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@id/common_top"
+        layout="@layout/activity_common_top" />
+    <!--
+    <android.support.design.widget.TabLayout
+        android:id="@+id/planDetails_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        app:tabIndicatorColor="@color/text_color_red"
+        app:tabSelectedTextColor="@color/text_color_red"
+        app:tabTextColor="@color/text_color_black03"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        /> -->
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/magic_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/planDetails_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

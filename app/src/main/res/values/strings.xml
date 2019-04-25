@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">北京赛车PK10</string>
+    <string name="hint_phone">输入想要查询的手机号</string>
+    <string name="submit">提交</string>
+    <string name="login">立即登录</string>
+    <string name="phone_address">查询号码属地</string>
+    <string name="multiple">综合演示</string>
+
+    <string name="tab_analyze">数据分析</string>
+    <string name="tab_plan">计划追号</string>
+    <string name="tab_mine">我</string>
+    <string name="tab_history">历史开奖</string>
+    <string name="home_buy_accredit">购买授权</string>
+    <string name="home_change_formula">切换公式</string>
+    <string name="home_change_plan">更改计划</string>
+
+    <string name="home_safe_tip">小心参考，理性投资</string>
+    <string name="select_lottery">选择彩种</string>
+    <string name="sure">确定</string>
+
+    <string name="mis_action_button_string">%1$s(%2$d/%3$d)</string>
+
+</resources>

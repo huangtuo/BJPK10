@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/analysis_rel_dialogInfo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="#33000000"
+    android:padding="@dimen/common_size_10">
+
+    <TextView
+        android:id="@+id/analysis_tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/common_size_14" />
+
+    <View
+        android:id="@+id/analysis_v_ball"
+        android:layout_width="@dimen/common_size_10"
+        android:layout_height="@dimen/common_size_10"
+        android:layout_below="@id/analysis_tv_num"
+        android:layout_marginTop="@dimen/common_size_10"
+        android:background="@drawable/circle_red_bg" />
+
+    <TextView
+        android:id="@+id/analysis_tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_size_10"
+        android:layout_marginTop="@dimen/common_size_2"
+        android:layout_toRightOf="@id/analysis_v_ball"
+        android:text="出现次数：7"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/common_size_14" />
+</RelativeLayout>
+
